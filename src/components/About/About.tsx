@@ -41,10 +41,10 @@ export function About() {
         </ScrollAnimation>
        
 
-        <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
-          <h3>Here are my main skills:</h3>
-        </ScrollAnimation>
-        <div className="hard-skills">
+      { /* <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
+          <h3></h3>
+        </ScrollAnimation>*/}
+        {/*<div className="hard-skills">
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.10 * 1000}>
               <img src={python} alt="python" />
@@ -109,19 +109,19 @@ export function About() {
             <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
               <img src={smileIcon} alt="Css" />
             </ScrollAnimation>
-          </div> */}
+          </div> 
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.20 * 1000}>
               <img src={boostrapIcon} alt="bootstrap" />
             </ScrollAnimation>
           </div>
-        </div>
+        </div>*/}
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.21 * 1000}>
           <img src={personalimg} alt="Dikshit Sambyal" />
         </ScrollAnimation>
-      </div>
+      </div> 
     </Container>
   )
 }

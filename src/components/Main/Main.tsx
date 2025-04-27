@@ -4,14 +4,15 @@ import { Hero } from "../Hero/Hero";
 import { About } from "../About/About";
 import { Contact } from "../Contact/Contact";
 import { Project } from "../Project/Project";
-import python from "../../assets/python.svg"
-import java from "../../assets/java.svg"
-import wordpress from "../../assets/wordpress.svg";
-import shopify from "../../assets/shopify.svg";
-import htmlIcon from "../../assets/html-icon.svg";
-import cssIcon from "../../assets/css-icon.svg";
-import sassIcon from "../../assets/sass-icon.svg";
-import jsIcon from "../../assets/js-icon.svg";
+import emj1 from "../../assets/emj1.svg"
+import emj2 from "../../assets/emj2.svg"
+import emj3 from "../../assets/emj3.svg";
+import emj4 from "../../assets/emj4.svg";
+import emj5 from "../../assets/emj5.svg";
+import emj6 from "../../assets/emj6.svg";
+import emj7 from "../../assets/emj7.svg";
+import emj8 from "../../assets/emj9.svg";
+
 // import nodeIcon from "../../assets/node-icon.svg";
 import reactIcon from "../../assets/react-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
@@ -153,33 +154,33 @@ export function Main() {
                 "weight": "400"
               },
               "image": [
-             /*   {
-                  "src": boostrapIcon,
+                {
+                  "src": emj1,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": cssIcon,
+                  "src": emj2,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": wordpress,
+                  "src": emj3,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": shopify,
+                  "src": emj4,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": htmlIcon,
+                  "src": emj5,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": jsIcon,
+                  "src": emj6,
                   "width": 20,
                   "height": 20
                 },
@@ -189,15 +190,15 @@ export function Main() {
                 //   "height": 20
                 // },
                 {
-                  "src": python,
+                  "src": emj7,
                   "width": 20,
                   "height": 20
                 },
                 {
-                  "src": java,
+                  "src": emj8,
                   "width": 20,
                   "height": 20
-                },
+                },/*
                 {
                   "src": reactIcon,
                   "width": 20,

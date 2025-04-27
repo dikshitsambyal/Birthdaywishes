@@ -9,14 +9,27 @@ import whatsapp from '../../assets/whatsapp.svg'
 import Hello from '../../assets/Hello.gif'
 import telegram from '../../assets/telegram.svg'
 import birthdaySong from '../../assets/happy-birthday-220024.mp3'
+import { useState, useRef } from 'react';
 
 
  
 export function Hero() {
-  function playSong() {
-    const audio = new Audio(birthdaySong)
-    audio.play()
-  }
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Function to handle play/pause
+  const playSong = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        // Pause the song if it's playing
+        audioRef.current.pause();
+      } else {
+        // Play the song if it's paused
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying); // Toggle play state
+    }
+  };
   
   return (
     <Container id="home">
@@ -35,45 +48,16 @@ export function Hero() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
           <BrowserRouter>
-          <NavHashLink 
-  smooth 
-  to="#contact" 
-  className="button" 
-  onClick={playSong}
->
-  Wishes
-</NavHashLink>
+          <div>
+      {/* Button to trigger play/pause */}
+      <NavHashLink smooth to="#home" className="button" onClick={playSong}>
+        Wishes
+      </NavHashLink>
+
+      {/* Audio element */}
+      <audio ref={audioRef} src={birthdaySong} />
+    </div>
           </BrowserRouter>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
-      <div className="social-media"><a
-        href="https://www.linkedin.com/in/codeDikshit"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src={linkedin} alt="Linkedin" />
-      </a>
-        <a
-          href="https://github.com/CodeDikshit/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={githubIcon} alt="GitHub" />
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Dikshit+I+found+your+contact+through+portfolio+site.%0A%0A"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={whatsapp} alt="Whatsapp" />
-        </a>
-        <a
-          href="https://t.me/CodeDikshit"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={telegram} alt="telegram" />
-        </a></div>
         </ScrollAnimation>
       </div>
       <div className="hero-image">
